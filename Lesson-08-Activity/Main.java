@@ -14,6 +14,7 @@ double conevolume(double r, double h){
   double v = 1/3.0 * Math.PI * r * r * h; 
   return v; 
 }
+double distance(double x1, double x2, double y2 )
 
   void init(){
   print("Hello");
