@@ -32,14 +32,20 @@ class Main {
       return "Unknown";
       }
     }
+    String pigLatin(String word){
+      return word.substring(1) + word.substring(0,1) + "ay";
+    }
     String nylocate(String zipCode){
       if (zipCode.substring(0,3).equals("100") || 
       zipCode.substringt(0,3).equals("101") ||
       zipCode.substringt(0,3).equals("102")){
         return "Manhattan";
+      else if (zipCode)
       }
       
     }
+    boolean validatePswd(String passwd){
+    if (passwd.length()>=5 && )
     }
   }
 
