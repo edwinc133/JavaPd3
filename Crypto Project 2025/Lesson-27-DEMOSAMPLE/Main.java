@@ -65,7 +65,7 @@ class Main {
   //Level 2 Cipher encoding with no wrapping
   String encode(String txt){
     String bld="";
-    
+    fffffffffffffffffff
      
     return bld;
   }
