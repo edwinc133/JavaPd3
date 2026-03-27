@@ -1,109 +1,38 @@
+import java.util.Scanner;
 
-class Main {
-	public static void main(String[] args) {
-    	(new Main()).init();
-	}
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-  void init(){
-/*  
-    Challenge 1:
-    1) Create the variables, ask the user for the variable values, write the equation in file EQ1-act6 and display the equation value.
-*/
-System.out.println("Enter value for x");
-double x = Input.readDouble(); 
-double y = Math.pow(x, 7); 
-System.out.println(y); 
+        System.out.println("Welcome to the Forest of Whispers!");
+        System.out.println("You awaken at the edge of a mysterious forest.");
+        System.out.println("A narrow path leads forward. Do you ENTER the forest or WALK away?");
+        System.out.print("Type 'enter' or 'walk': ");
+        String choice1 = scanner.nextLine().toLowerCase();
 
-/*  
-    Challenge 2:
-    1) Create the variables, ask the user for the variable values, write the equation in fileEQ1.1-act6 and display the equation value.
-*/ 
-System.out.println("Enter value for z");
-double z = Input.readDouble(); 
-double q = Math.pow(z, 3) + 5; 
-System.out.println(q); 
+        if (choice1.equals("enter")) {
+            System.out.println("\nYou step into the forest. The trees whisper your name.");
+            System.out.println("Soon you reach a fork in the path.");
+            System.out.print("Do you go LEFT toward the glowing light or RIGHT toward the dark cave? ");
+            String choice2 = scanner.nextLine().toLowerCase();
 
-  
+            if (choice2.equals("left")) {
+                System.out.println("\nThe light leads you to a clearing where a friendly spirit grants you a wish.");
+                System.out.println("You win!");
+            } else if (choice2.equals("right")) {
+                System.out.println("\nThe cave is home to a sleeping dragon. It wakes up... and you run for your life!");
+                System.out.println("Game over.");
+            } else {
+                System.out.println("\nYou hesitate too long. The forest shifts around you, and you become lost forever.");
+            }
 
-/*  
-    Challenge 3:
-    Create the variables, ask the user for the variable values, write the equation in file EQ2-act6 and display the equation value..
-    
-*/ 
-System.out.println("Enter value for t"); 
-double t = Input.readDouble(); 
-System.out.println("Enter value for r"); 
-double r = Input.readDouble(); 
-double s = Math.pow(t, 5) * Math.pow(r+2, 4);
-System.out.println(s);
- 
+        } else if (choice1.equals("walk")) {
+            System.out.println("\nYou walk away, choosing safety over adventure.");
+            System.out.println("But the forest will remember your cowardice.");
+        } else {
+            System.out.println("\nYou stand still, unable to decide. The world fades to black.");
+        }
 
-/*  
-    Challenge 4:
-    Create the variables, ask the user for the variable values, write the equation in file EQ3-act6 and display the equation value..
-    
-*/ 
-System.out.println("Enter value for A");
-double A = Input.readDouble(); 
-System.out.println("Enter value for B");
-double B = Input.readDouble(); 
-double C = Math.sqrt(A + B); 
-System.out.println(C); 
-
-
-
-/*  
-    Challenge 5:
-    Create the variables, ask the user for the variable values, write the equation in file EQ4-act6 and display the equation value..
-    
-*/
-System.out.println("Enter value for x2");
-double x2 = Input.readDouble();
-System.out.println("Enter value for x1"); 
-double x1 = Input.readDouble(); 
-System.out.println("Enter value for y2"); 
-double y2 = Input.readDouble(); 
-System.out.println("Enter value for y1"); 
-double y1 = Input.readDouble(); 
-double d = Math.sqrt(Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2)); 
-System.out.println(d); 
-
-
-
-
-/*  
-    Challenge 6:
-    Create the variables, ask the user for the variable values, write the equation g=sin(deg) and display the equation value..
-    
-*/
-
-
-
-
-
-
-/*  
-    Challenge 7:
-    Create the variables, ask the user for the variable values, write the equation in file EQ5-act6 and display the equation value.
-    
-*/
-
-
-
-
-/*  
-    *** Bonus Challenge ***:
-    Create the variables, ask the user for the variable values, write the equation in file Ch-act6 and display the equation value.
-
-    HINT: What does the "plus minus: after "-b" mean.
-*/
-
-
-
-
-
-    // **************************************************
-    // **** Don't write any code below here.  ***********
-    // **************************************************
-  }
+        scanner.close();
+    }
 }

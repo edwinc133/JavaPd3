@@ -34,7 +34,7 @@ class Main {
 
     print(queryResult);
 
-    sql = "Select * From cr101 Where studentID = 'STUDENT%';"; 
+    sql = "Select StudentID From cr101;";
 
     queryResult = db.runSQL(sql,"table-auto"); 
 
