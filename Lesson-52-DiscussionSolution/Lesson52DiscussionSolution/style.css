@@ -73,36 +73,56 @@ nav a:hover{
   
 }
 #output{
-  display: flex;
+  display:flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 18px;
-  padding: 20px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #dff2ff;
+  margin:5px;
+  padding:5px;
 }
-.card {
-  background: #e6d6d6;
-  width: calc(33.333% - 18px);
-  border: 1px solid #000000;
-  text-align: center;
-  box-shadow: none;
+.card{
+  /*flex:1;   THIS SQUISHES */
+  /*flex-basis:150px   */
+  width:450px;
+  margin:5px;
+  padding:5px;
+  border:1px solid black;
+  text-align:center;
+  background-color:#dedfe7;
+}
+/* target all h4 elements*/
+h4{
+  color:#0000ff
+}
+/*target all the paragraphs in the card class*/
+.card p{
+  font-size:17px;
+  color: black;
+  font-family:verdana;
+  font-style:italic;
+}
+.card div{
+  font-size:15px;
+  color: black;
+  font-family:verdana;
+  font-style:italic;
+}
+.card di2{
+  font-size:17px;
+  color: black;
+  font-family:verdana;
+  font-style:italic;
+}
+.button{
+  text-decoration:none;
+  background-color:blue;
+  color:white;
+  border-radius:4px;
+  padding:6px;
+  box-shadow:2px 2px 2px black;
+}
+.button:hover{
+  background-color:cornflowerblue;
 }
 
-.card-title {
-  font-weight: bold;
-  margin-bottom: 2px;
-  color: #000;
-}
-
-
-.label {
-  font-weight: bold;
-  text-decoration: underline;
-  margin-bottom: 2px;
-  color: #000;
-}
-
-.value {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #000;
-}
