@@ -39,11 +39,21 @@ class Main {
    // Add your  code here
     
     server.createContext("/", new RouteHandler("You are connected, but route not given or incorrect....") );
+    String sql ""; 
 
-    String sql = ""; 
-    sql = " SELECT * FROM Players INNER JOIN Teams on Players.TeamID = Team.TeamID ";
+    sql = " SELECT * FROM Players"
 
-    server.createContext("/soccer", new RouteHandler(db, sql) );
+    server.createContext("/players", new RouteHandler(db, sql) );
+
+    String sql2 = ""; 
+    sql2 = " SELECT * FROM Players INNER JOIN Teams on Players.TeamID = Team.TeamID ";
+
+    server.createContext("/players/teams", new RouteHandler(db, sql2) );
+
+    String sql3 = ""; 
+    sql3 = "SELECT * FROM Players INNER JOIN Teams on Players.TeamID = Team.TeamID INNER JOIN League on Team.TeamID = League.League"; 
+
+    server.createContext("/players/teams/leagues", new RouteHandler(db, sql3) );
     //Start the server
     server.start();
 
